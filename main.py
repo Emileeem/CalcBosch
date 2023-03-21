@@ -14,5 +14,10 @@ while True:
                 "/":divisao(v1,v2)}
         op = input("Insira a operação (+.-,*,/): ")
         print(operacoes[op])
-    except:
+    except ValueError:
         print("Valor inválido")
+    except KeyError:
+        print("Operação inválida")
+    except KeyboardInterrupt:
+        print("\nSaindo...")
+        break
